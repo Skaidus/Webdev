@@ -1,0 +1,168 @@
+body {
+    background-color: #000000;
+    height: 100%;
+    background-image: url(../images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:2%;
+}
+
+
+/* Title section */
+
+#title-wrap {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    padding: 5px;
+    background-color: #000000;
+    margin-bottom: 20px;
+}
+
+#title-wrap .icon {
+    float:left;
+    height: 50px;
+    color: #c7c7c7;
+}
+
+#title-wrap .icon img {
+    float:left;
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 0 0;
+}
+
+#quicklink-wrap {
+    float:right;
+    overflow: hidden;
+    position: none;
+    padding: 5px;
+    background-color: rgb(151, 71, 255);
+    margin: 5px
+}
+
+#quicklink-wrap li {
+    display: inline;
+    padding: 0 5px;
+    
+}
+
+#quicklink-wrap li a {
+    color: #FFFFFF;
+    font-weight: 400;
+    text-decoration: none;
+}
+#quicklink-wrap li a:hover {
+    color: #008dff;
+}
+
+/* Second row section*/
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+/* Center and main warp */
+
+#main-wrap {
+    padding: 0 2%;
+    width: 50%;
+    float:left;
+   
+}
+
+#main-wrap .column {
+    height: 100%;
+    border-radius: 12px;
+    background: #cdcdcd;
+}
+
+#main-wrap .column .article {
+    padding: 1%;
+    margin: 6px 0 0 6px;
+    display: inline-table;
+    
+}
+
+#main-wrap .column .article.media h2 {
+    text-decoration: underline;
+    
+}
+
+#main-wrap .column .article.media p { 
+    padding-left: 10px;
+}
+
+#main-wrap .column .article.media img{
+    max-width: 20%;
+    float: left;
+    margin-right: 10px;
+    
+}
+
+#main-wrap .column .article.media video{
+    width: 50%;
+    height: 33.33%;
+    float: left;
+    margin-right: 10px;
+    
+}
+
+/* Side warps */
+
+.side-wrap {
+    float: left;
+    background: #cacaca;
+    text-align: left;
+    border-radius: 12px;
+    width: 25%;
+}
+
+
+.side-content {
+    padding: 1%;
+}
+
+/* General stuff */
+
+ul{
+    list-style-type: none;
+}
+
+
+li span{
+    color:red;
+}
+
+/* Footer warp  */
+
+
+#footer-wrapper {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 4%, rgba(31,29,29,1) 100%);
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    height: 62px;
+    line-height: 62px;
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #sidemenu-wrap {
+        display:none;
+    }
+    #main-wrap {
+        margin-left: 0%;
+        width: 100%;
+    }
+    #news-wrapper {
+        width: 100%;
+    }
+    #title-wrap .icon {
+        font-size: 20px;
+    }
+}
