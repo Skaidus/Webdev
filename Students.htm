@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<html>
 <head>
     <title>My first webpage</title>
     <meta name="author" content="Skaidus">
@@ -13,58 +12,57 @@
     <link type="text/css" rel="stylesheet" href="style/reset.css">
     <link type="text/css" rel="stylesheet" href="style/style.css">
 </head>
-<style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 15px;
-      text-align: left;
-    }
-    </style>
 <body>
     
-    <div id="title-wrap">
-        <div class="dropdown" style="float:left;">
-            <div class="burguer">
-                <div></div>
-                <div></div>
-                <div></div>                 
-            </div>
-            <input type="checkbox">
+    <header>
+        <nav class="dropdown" style="float:left;">
+            <label for="burguesita">
+                <div class="burguer">
+                    <div></div>
+                    <div></div>
+                    <div></div>                 
+                </div>
+            </label>
+            <input id="burguesita" type="checkbox">
             <div class="dropdown-content" style="left:0;">
-            <a href="#home">Students</a>
-            <a href="#newsa">Forum</a>
-            <a href="#contact">Grades</a>
+            <a href="index.htm">Course</a>
+            <a href="Forum.htm">Forum</a>
+            <a href="Califications.htm">Grades</a>
             <a href="#news">Last News</a>
-            <a href="#events">Next events</a>
+            <a href="#events">Last Events</a>
             </div>
-          </div>
+          </nav>
         <h1 class="icon">
             <img src="images/icon.png" alt="Cosmog">
-            My First Webpage
+            <b class="desktop">
+                My First Webpage                
+            </b>
+            <b class="tablet">
+                Students              
+            </b>
         </h1>
-        <div id="quicklink-wrap">
-            <li><a href="#">CONTACT&nbsp;US</a></li>
-            <li><a href="#">TOS</a></li>
-            <li><a href="#">PRIVACY&nbsp;POLICY</a></li>
-        </div>
-    </div>
-    <div class="row">
+        <nav id="quicklink-wrap">
+            <ul>
+                <li><a href="#">CONTACT&nbsp;US</a></li>
+                <li><a href="#">TOS</a></li>
+                <li><a href="#">PRIVACY&nbsp;POLICY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
         <div class="side-wrapr">
             <div class="side-content">
-                <h2>Course</h2>
+                <h2 class="desktop">Students</h2>
                 <ul class="nav">
-                    <li><a href="#home">Students</a></li>
-                    <li><a href="#newsa">Forum</a></li>
-                    <li><a href="#contact">Grades</a></li>
-                    <li class="small"><a href="#news">Last News</a></li>
-                    <li class="small"><a href="#events">Next events</a></li>
+                    <li><a href="index.htm">Course</a></li>
+                    <li><a href="Forum.htm">Forum</a></li>
+                    <li><a href="Califications.htm">Grades</a></li>
+                    <li><a class="tablet" href="#news">Last News</a></li>
+                    <li><a class="tablet" href="#events">Last Events</a></li>
                 </ul>
             </div>
         </div>
-        <div id="main-wrap">
+        <article id="main-wrap">
             <div class ="column">
                 <table style="width: 100%;">
                 <tr>
@@ -97,7 +95,7 @@
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p1.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -117,14 +115,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p2.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -144,14 +142,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p3.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -171,14 +169,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p4.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -198,14 +196,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p5.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -225,14 +223,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p6.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -252,14 +250,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p7.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -279,14 +277,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p8.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -306,14 +304,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p9.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -333,14 +331,14 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
                 <tr>
                     <td >
                         <b>
-                            imagen
+                            <img src="images/p10.png" alt="pfp">
                         </b>
                     </td >
                     <td >
@@ -360,12 +358,12 @@
                     </td>
                     <td >
                         <b>
-                            icono
+                            <img src="images/send.png" alt="pfp">
                         </b>
                     </td>
                 </tr>
             </table>
-        </div>
+        </article>
             
 
         </div>
@@ -373,23 +371,29 @@
             <div class="side-content">
                 <h2 id="news">Last News</h2>
                 <ul>
-                    <li><span>10/09 - </span>Landorus es baneado</li>
+                    <li><span>4/09 - </span>Landorus es baneado</li>
+                    <li><span>5/09 - </span>Agumon es anunciado</li>
+                    <li><span>9/09 - </span>Hau gana inteligencia</li>
                 </ul>
             </div>
             <div class="side-content">
                 <h2 id="events">Next Events</h2>
                 <ul>
-                    <li><span>69/09 - </span>Sale Pokemon Z</li>
+                    <li><span>3/10 - </span>Sale Pokemon Z</li>
+                    <li><span>3/11 - </span>Cosmog sale de la bolsa</li>
+                    <li><span>3/12 - </span>Cosmog entra en la bolsa</li>
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
     
     
     
     
-    <div id="footer-wrapper">
-        COPYRIGHT Skaidus 
-    </div>
+    <footer>
+        <a href="https://www.uc3m.es/">UC3M</a> |
+        ©Skaidus&Zhione
+        | Politica de privacidad
+    </footer>
 </body>
 </html>

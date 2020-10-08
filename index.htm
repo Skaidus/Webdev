@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<html>
 <head>
     <title>My first webpage</title>
     <meta name="author" content="Skaidus">
@@ -15,46 +14,56 @@
 </head>
 <body>
     
-    <div id="title-wrap">
+    <header>
         <div class="dropdown" style="float:left;">
-            <div class="burguer">
-                <div></div>
-                <div></div>
-                <div></div>                 
-            </div>
-            <input type="checkbox">
-            <div class="dropdown-content" style="left:0;">
-            <a href="#home">Students</a>
-            <a href="#newsa">Forum</a>
-            <a href="#contact">Grades</a>
-            <a href="#news">Last News</a>
-            <a href="#events">Next events</a>
-            </div>
+            <label for="burguesita">
+                <div class="burguer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>                 
+                </div>
+            </label>
+            <input id="burguesita" type="checkbox">
+            <nav class="dropdown-content" style="left:0;">
+                <a href="Students.htm">Students</a>
+                <a href="Forum.htm">Forum</a>
+                <a href="Califications.htm">Grades</a>
+                <a href="#news">Last News</a>
+                <a href="#events">Last Events</a>
+            </nav>
           </div>
         <h1 class="icon">
             <img src="images/icon.png" alt="Cosmog">
-            My First Webpage
+            <b class="desktop">
+                My First Webpage                
+            </b>
+            <b class="tablet">
+                Course              
+            </b>
+             
         </h1>
-        <div id="quicklink-wrap">
-            <li><a href="#">CONTACT&nbsp;US</a></li>
-            <li><a href="#">TOS</a></li>
-            <li><a href="#">PRIVACY&nbsp;POLICY</a></li>
-        </div>
-    </div>
-    <div class="row">
-        <div class="side-wrapr">
+        <nav id="quicklink-wrap">
+            <ul>
+                <li><a href="#">CONTACT&nbsp;US</a></li>
+                <li><a href="#">TOS</a></li>
+                <li><a href="#">PRIVACY&nbsp;POLICY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <nav class="side-wrapr">
             <div class="side-content">
-                <h2>Course</h2>
+                <h2 class="desktop">Course</h2>
                 <ul class="nav">
-                    <li><a href="#home">Students</a></li>
-                    <li><a href="#newsa">Forum</a></li>
-                    <li><a href="#contact">Grades</a></li>
-                    <li class="small"><a href="#news">Last News</a></li>
-                    <li class="small"><a href="#events">Next events</a></li>
+                    <li><a href="Students.htm">Students</a></li>
+                    <li><a href="Forum.htm">Forum</a></li>
+                    <li><a href="Califications.htm">Grades</a></li>
+                    <li><a class="tablet" href="#news">Last News</a></li>
+                    <li><a class="tablet" href="#events">Last Events</a></li>
                 </ul>
             </div>
-        </div>
-        <div id="main-wrap">
+        </nav>
+        <article id="main-wrap">
             <div class="column"> 
                 <div class="article topic">
                     <img src="images/icon.png" alt="Cosmog">
@@ -68,7 +77,7 @@
                 <div class="article media">
                     <h3>Presentacion de Cosmog</h3>
                     <video width="320" height="240" controls>
-                        <source src="images/video.mp4" type="video/mp4">
+                        <source src="images/v1.mp4" type="video/mp4">
                     </video>
                     
                     <p>
@@ -77,7 +86,7 @@
                 <div class="article media">
                     <h3>Como conseguir a Cosmog</h3>
                     <video width="320" height="240" controls>
-                        <source src="images/video.mp4" type="video/mp4">
+                        <source src="images/v2.mp4" type="video/mp4">
                     </video>
 
                         
@@ -88,21 +97,22 @@
                 <div class="article media">
                     <h3>Set Competitivo de Cosmog</h3>
                     <video width="320" height="240" controls>
-                        <source src="images/video.mp4" type="video/mp4">
+                        <source src="images/v3.mp4" type="video/mp4">
                     </video>
                    
                     <p>
                         En este video, repasaremos las cualidades competitivas de Cosmog, tanto sus sets, como sus estadisticas para convertirte en el mejor jugador de PU.                    </p>
                 </div>
                 <div class="article topic">
-                    <img src="images/icon.png" alt="Cosmog">
+                    <img src="images/ct.png" alt="Cosmog">
                     <h2>The Crown Tundra</h2>
                     <p>
-                        The Crown Tundra es el nuevo DLC de Pokemon Sword and Shield. The Crown Tundra nos llevará a una nueva zona de la región de Galar que explorar, porque en eso se centra The Crown Tundra, en la exploración donde nos encontraremos con viejos conocidos y caras nuevas. Además de nuevas formas de exploración como las nuevas raids Dinamax. Y conoceremos a Calyrex, el antiguo rey de Galar.                </div>
+                        The Crown Tundra es el nuevo DLC de Pokemon Sword and Shield. The Crown Tundra nos llevará a una nueva zona de la región de Galar que explorar, porque en eso se centra The Crown Tundra, en la exploración donde nos encontraremos con viejos conocidos y caras nuevas. Además de nuevas formas de exploración como las nuevas raids Dinamax. Y conoceremos a Calyrex, el antiguo rey de Galar.                
+                    </div>
                 <div class="article media">
                     <h3>Aventuras Dinamax</h3>
                     <video width="320" height="240" controls>
-                        <source src="images/video.mp4" type="video/mp4">
+                        <source src="images/v4.mp4" type="video/mp4">
                     </video>
                     
                     <p>
@@ -111,7 +121,7 @@
                 <div class="article media">
                     <h3>Calyrex el antiguo rey de Galar</h3>
                     <video width="320" height="240" controls>
-                        <source src="images/video.mp4" type="video/mp4">
+                        <source src="images/v5.mp4" type="video/mp4">
                     </video>
                     
                     <p>
@@ -120,35 +130,76 @@
                 <div class="article media">
                     <h3>¿Viejos o nuevos conocidos?</h3>
                     <video width="320" height="240" controls>
-                        <source src="images/video.mp4" type="video/mp4">
+                        <source src="images/v6.mp4" type="video/mp4">
                     </video>
                     
                     <p>
-                        En este video repasaremos las nuevas formas de los pajaros legendarios de Kanto, Articuno, Zapdos y Moltres y los nuevos Regis que nos encotraremos por The Crown Tundra.                </div>
+                        En este video repasaremos las nuevas formas de los pajaros legendarios de Kanto, Articuno, Zapdos y Moltres y los nuevos Regis que nos encotraremos por The Crown Tundra.               
+                </div>
+                <div class="article topic">
+                    <img src="images/mc.png" alt="Cosmog">
+                    <h2>La Mitologia de Sinnoh</h2>
+                    <p>
+                            Esta región se caracteriza por ser rica en leyendas y mitos sobre la creación del universo. Desde Caelestis hasta el Monte Corona, es un lugar en el que encontraremos, a parte de un resfriado si jugamos en las ediciones Diamante y Perla, a una campeona que nos contará sobre todo tipo de relatos sobre estas deidades. Y Restaurar todo. Muchos.       </p>
+                        
+                    </div>
+                <div class="article media">
+                    <h3>Dialga, la deidad del tiempo</h3>
+                    <video width="320" height="240" controls>
+                        <source src="images/v7.mp4" type="video/mp4">
+                    </video>
+                    
+                    <p>
+                        Las leyendas cuentan de esta criatura que los relojes van más rápidos cada vez que respira. Oh eso y que le gusta usar stealth rock. </p>
+                </div>
+                <div class="article media">
+                    <h3>Palkia, la deidad del espacio</h3>
+                    <video width="320" height="240" controls>
+                        <source src="images/v8.mp4" type="video/mp4">
+                    </video>
+                    
+                    <p>
+                        Los mitos de la región dan a entender que Palkia puede controlar espacios vectoriales. Esperemos que no nos haga cambiar de base.               </p>
+                </div>
+                <div class="article media">
+                    <h3>Cintia, la campeona.</h3>
+                    <video width="320" height="240" controls>
+                        <source src="images/v9.mp4" type="video/mp4">
+                    </video>
+                    
+                    <p>
+                        ¿Giratina, decís? Eso va a hacer con vosotros al llegar a la liga: haceros girar y atinar una pata para mandaros a comprar más pociones.       </p>       
+                </div>
             </div>
             
-        </div>
-        <div class="side-wrapl">
+        </article>
+        <article class="side-wrapl">
             <div class="side-content">
                 <h2 id="news">Last News</h2>
                 <ul>
-                    <li><span>10/09 - </span>Landorus es baneado</li>
+                    <li><span>4/09 - </span>Landorus es baneado</li>
+                    <li><span>5/09 - </span>Agumon es anunciado</li>
+                    <li><span>9/09 - </span>Hau gana inteligencia</li>
                 </ul>
             </div>
             <div class="side-content">
                 <h2 id="events">Next Events</h2>
                 <ul>
-                    <li><span>69/09 - </span>Sale Pokemon Z</li>
+                    <li><span>3/10 - </span>Sale Pokemon Z</li>
+                    <li><span>3/11 - </span>Cosmog sale de la bolsa</li>
+                    <li><span>3/12 - </span>Cosmog entra en la bolsa</li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
     
     
     
     
-    <div id="footer-wrapper">
-        COPYRIGHT Skaidus 
-    </div>
+    <footer>
+        <a href="https://www.uc3m.es/">UC3M</a> |
+        ©Skaidus&Zhione
+        | Politica de privacidad
+    </footer>
 </body>
 </html>
