@@ -31,6 +31,22 @@ section {
     
 }
 
+.button {
+    background-color:rgba(76, 175, 80, 0); /* Green */
+    border: none;
+    color: white;
+    display : block;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.filled {
+    background-color:rgb(151, 71, 255);
+  }
+
+
 ul{
     list-style-type: none;
     margin:0;
@@ -49,6 +65,10 @@ b {
     margin-left: 10px;
 }
 
+.nobackground{
+    color:white;
+}
+
 
 header {
     width: 100%;
@@ -63,6 +83,12 @@ header .icon {
     float:left;
     height: 50px;
     color: #c7c7c7;
+}
+
+.text-field{
+        min-width: 100%;
+        max-width: 100%;
+    
 }
 
 header .icon img {
@@ -85,6 +111,10 @@ header .icon img {
     display: inline;
     padding: 0 5px;
     
+}
+
+#inicioDeSesion{
+    text-align: center;
 }
 
 #quicklink-wrap ul{

@@ -43,3 +43,4 @@ function pulsarBotonCalificaciones(){
     document.getElementById('botonForo').style.display = 'block'
     document.getElementById('botonCalificaciones').style.display = 'block'
 }
+

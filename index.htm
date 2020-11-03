@@ -51,7 +51,7 @@
             <b class="tablet">
                 Curso              
             </b>
-            <img src="images/icon.png" alt="Cosmog">
+            <img src="images/pfp.png" alt="pfp">
             <b class="desktop">
                 Nombre de usuario
             </b>
@@ -62,7 +62,7 @@
             <ul>
                 <li><a href="#">Contacta</a></li>
                 <li><a href="#">FAQ</a></li>
-                <li><button id ="irAInicioDeSesion" onclick="document.getElementById('páginaDeInicio').style.display = 'block'
+                <li><button id ="irAInicioDeSesion" class = "button" onclick="document.getElementById('páginaDeInicio').style.display = 'block'
     document.getElementById('Admin').style.display = 'none'">Iniciar sesión</button></li>
             </ul>
         </nav>
@@ -72,7 +72,7 @@
             <div class="side-content">
                 <h2 class="desktop">Curso</h2>
                 <ul class="nav">
-                    <button id="botonEstudiantes" type="=button" onclick="
+                    <button id="botonEstudiantes" class="button" type="=button" onclick="
                             document.getElementById('principal').style.display = 'none'
                             document.getElementById('foro').style.display = 'none'
                             document.getElementById('calificaciones').style.display = 'none'
@@ -83,7 +83,7 @@
                             document.getElementById('botonCalificaciones').style.display = 'block'
                             "
                     >Estudiantes</button>
-                    <button id="botonCurso" type="=button" onclick="
+                    <button id="botonCurso" class="button" type="=button" onclick="
                             document.getElementById('principal').style.display = 'block'
                             document.getElementById('foro').style.display = 'none'
                             document.getElementById('calificaciones').style.display = 'none'
@@ -94,7 +94,7 @@
                             document.getElementById('botonCalificaciones').style.display = 'block'
                             "
                     >Curso</button>
-                    <button id="botonForo" type="=button" onclick="
+                    <button id="botonForo" class="button" type="=button" onclick="
                             document.getElementById('principal').style.display = 'none'
                             document.getElementById('foro').style.display = 'block'
                             document.getElementById('calificaciones').style.display = 'none'
@@ -105,7 +105,7 @@
                             document.getElementById('botonCalificaciones').style.display = 'block'
                             "
                     >Foro</button>
-                    <button id="botonCalificaciones" type="=button" onclick="
+                    <button id="botonCalificaciones" class="button" type="=button" onclick="
                             document.getElementById('principal').style.display = 'none'
                             document.getElementById('foro').style.display = 'none'
                             document.getElementById('calificaciones').style.display = 'block'
@@ -117,7 +117,7 @@
                             "
                     >Calificaciones</button>
                     <li><a class="tablet" href="#news">Últimas noticias</a></li>
-                    <li><a class="tablet" href="#events">Próximos eventos</a></li>
+                    <li><a id="datepicker" class="tablet" href="#events">Próximos eventos</a></li>
                 </ul>
             </div>
         </nav>
@@ -842,9 +842,9 @@
 
 
 </body>
-<div id ="páginaDeInicio" style="display: none">
+<div id ="páginaDeInicio" class="nobackground" style="display: none;">
 <formulario >
-    <div id="inicioDeSesion">
+    <div  id="inicioDeSesion">
         <h3 >
             INICIO DE SESION
         </h3>
@@ -860,8 +860,8 @@
             <div class="form-col2"><input class="text-field" type="password" name="password" id="edit-pass" maxlength="128" size="50" tabindex="2" value=""></div>
         </div>
         <div class="botones">
-            <input id="login" class="gradient " type="submit" value="Iniciar Sesion" name="login">
-            <input id="Registro" class="gradient " type="submit" value="Registrarse" name="registro" onclick="
+            <input id="login" class="gradient button filled" type="submit" value="Iniciar Sesion" name="login">
+            <input id="Registro" class="gradient button filled" type="submit" value="Registrarse" name="registro" onclick="
                 document.getElementById('inicioDeSesion').style.display = 'none'
                 document.getElementById('FormularioDeRegistro').style.display = 'block'">
 
@@ -940,8 +940,8 @@
             <input aria-valuetext="UC3M" disabled name="universidad" id="edit-uni" size="50" value="Universidad Carlos III">
         </div>
         <label><input type="checkbox" name = "terms" value="accept"> <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p></label>
-        <button type="button" id="RegistroCompleto">Completar Registro</button>
-        <button type="button" id="BorrarRegistro" onclick="document.getElementsByClassName('form1').children.value ='' ">Borrar</button>
+        <button class="button filled" type="button" id="RegistroCompleto">Completar Registro</button>
+        <button class="button filled" type="button" id="BorrarRegistro" onclick="document.getElementsByClassName('form1').children.value ='' ">Borrar</button>
 
     </div>
     </table>
