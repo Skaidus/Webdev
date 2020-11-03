@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js">
+
+    </script>
+
     <title>Nebulilla curso</title>
     <meta name="author" content="Skaidus">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=0">
@@ -12,7 +16,7 @@
     <link type="text/css" rel="stylesheet" href="style/reset.css">
     <link type="text/css" rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body id ="Admin">
     
     <header>
         <div class="dropdown" style="float:left;">
@@ -36,13 +40,18 @@
             <b class="tablet">
                 Curso              
             </b>
-             
+            <img src="images/icon.png" alt="Cosmog">
+            <b class="desktop">
+                Nombre de usuario
+            </b>
+
         </h1>
+
         <nav id="quicklink-wrap">
             <ul>
                 <li><a href="#">Contacta</a></li>
                 <li><a href="#">FAQ</a></li>
-                <li><a href="#">Iniciar&nbsp;sesión</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -51,15 +60,633 @@
             <div class="side-content">
                 <h2 class="desktop">Curso</h2>
                 <ul class="nav">
-                    <li><a href="Students.htm">Estudiantes</a></li>
-                    <li><a href="Forum.htm">Foro</a></li>
-                    <li><a href="Califications.htm">Calificaciones</a></li>
+                    <button id="botonEstudiantes" type="=button" onclick="
+                            document.getElementById('principal').style.display = 'none'
+                            document.getElementById('foro').style.display = 'none'
+                            document.getElementById('calificaciones').style.display = 'none'
+                            document.getElementById('estudiantes').style.display = 'block'
+                            document.getElementById('botonEstudiantes').style.display = 'none'
+                            document.getElementById('botonCurso').style.display = 'block'
+                            document.getElementById('botonForo').style.display = 'block'
+                            document.getElementById('botonCalificaciones').style.display = 'block'
+                            "
+                    >Estudiantes</button>
+                    <button id="botonCurso" type="=button" onclick="
+                            document.getElementById('principal').style.display = 'block'
+                            document.getElementById('foro').style.display = 'none'
+                            document.getElementById('calificaciones').style.display = 'none'
+                            document.getElementById('estudiantes').style.display = 'none'
+                            document.getElementById('botonEstudiantes').style.display = 'block'
+                            document.getElementById('botonCurso').style.display = 'none'
+                            document.getElementById('botonForo').style.display = 'block'
+                            document.getElementById('botonCalificaciones').style.display = 'block'
+                            "
+                    >Curso</button>
+                    <button id="botonForo" type="=button" onclick="
+                            document.getElementById('principal').style.display = 'none'
+                            document.getElementById('foro').style.display = 'block'
+                            document.getElementById('calificaciones').style.display = 'none'
+                            document.getElementById('estudiantes').style.display = 'none'
+                            document.getElementById('botonEstudiantes').style.display = 'block'
+                            document.getElementById('botonCurso').style.display = 'block'
+                            document.getElementById('botonForo').style.display = 'none'
+                            document.getElementById('botonCalificaciones').style.display = 'block'
+                            "
+                    >Foro</button>
+                    <button id="botonCalificaciones" type="=button" onclick="
+                            document.getElementById('principal').style.display = 'none'
+                            document.getElementById('foro').style.display = 'none'
+                            document.getElementById('calificaciones').style.display = 'block'
+                            document.getElementById('estudiantes').style.display = 'none'
+                            document.getElementById('botonEstudiantes').style.display = 'block'
+                            document.getElementById('botonCurso').style.display = 'block'
+                            document.getElementById('botonForo').style.display = 'block'
+                            document.getElementById('botonCalificaciones').style.display = 'none'
+                            "
+                    >Calificaciones</button>
                     <li><a class="tablet" href="#news">Últimas noticias</a></li>
                     <li><a class="tablet" href="#events">Próximos eventos</a></li>
                 </ul>
             </div>
         </nav>
         <article id="main-wrap">
+            <div id = "calificaciones" style="display: none">
+                <div class ="column">
+                    <button id="exportarTabla">Exportar Tabla</button>
+                    <table id="califications" style="width: 100%;">
+                        <tr>
+                            <th>
+                                estudiante
+                            </th>
+                            <th>
+                                actividad 1
+                            </th>
+                            <th>
+                                actividad 2
+                            </th>
+                            <th>
+                                actividad 3
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Red Satoshi
+                            </td>
+                            <td>
+                                9.5
+                            </td>
+                            <td>
+                                9.0
+                            </td>
+                            <td>
+                                8.7
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Blue Oak
+                            </td>
+                            <td>
+                                9.3
+                            </td>
+                            <td>
+                                8.8
+                            </td>
+                            <td>
+                                8.5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Gold Ho Oh
+                            </td>
+                            <td>
+                                9.7
+                            </td>
+                            <td>
+                                9.2
+                            </td>
+                            <td>
+                                8.9
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Silver Lugia
+                            </td>
+                            <td>
+                                6.7
+                            </td>
+                            <td>
+                                5.4
+                            </td>
+                            <td>
+                                8.3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Bruno Groudon
+                            </td>
+                            <td>
+                                10.0
+                            </td>
+                            <td>
+                                10.0
+                            </td>
+                            <td>
+                                10.0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Aura Kyogre
+                            </td>
+                            <td>
+                                9.0
+                            </td>
+                            <td>
+                                9.0
+                            </td>
+                            <td>
+                                9.0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Leon Dialga
+                            </td>
+                            <td>
+                                8.9
+                            </td>
+                            <td>
+                                3.0
+                            </td>
+                            <td>
+                                10.0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Maya Palkia
+                            </td>
+                            <td>
+                                8.7
+                            </td>
+                            <td>
+                                9.8
+                            </td>
+                            <td>
+                                6.8
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lucho Zekrom
+                            </td>
+                            <td>
+                                10.0
+                            </td>
+                            <td>
+                                8.6
+                            </td>
+                            <td>
+                                7.5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Liza Reshiram
+                            </td>
+                            <td>
+                                9.3
+                            </td>
+                            <td>
+                                5.8
+                            </td>
+                            <td>
+                                7.4
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+            <div id = "foro" style="display: none">
+                <div class ="column">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td >
+                                <b>
+                                    Titulo
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Numero de mensajes
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Ultimo mensaje
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    Mejores iniciales de cada generación
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    27
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    18:36 10/10/2020
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    Moveset de Cinderance
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    7
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    19:03 9/10/2020
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    ¿Es viable jugar Torkoal a dia de hoy?
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    3
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    20:42 7/10/2020
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    Magikarp Speedrun
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    19
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    19:37 4/10/2020
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    Bienvenidos Cosmognautas
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    52
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    15:43 2/10/2020
+                                </b>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div id="estudiantes" style="display: none">
+                <div class ="column">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <b>
+
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Nombre
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Apellidos
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Correo electronico
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p1.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Red
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Satoshi
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    redpokemon@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp" onclick="parent.location='mailto:redpokemon@pidgeymail.com'">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p2.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Blue
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Oak
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    blueoak@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p3.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Gold
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Ho Oh
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    hearthgold@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p4.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Silver
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Lugia
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    soulsilver@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p5.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Bruno
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Groudon
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    brunoruby@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p6.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Aura
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Kyogre
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    aurasaphire@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p7.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Leon
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Dialga
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    diamondleon@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p8.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Maya
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Palkia
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    pearlmaya@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p9.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Lucho
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Zekrom
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    whitelucho@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <b>
+                                    <img src="images/p10.png" alt="pfp">
+                                </b>
+                            </td >
+                            <td >
+                                <b>
+                                    Liza
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    Reshiram
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    blackliza@pidgeymail.com
+                                </b>
+                            </td>
+                            <td >
+                                <b>
+                                    <img src="images/send.png" alt="pfp">
+                                </b>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div id="principal">
             <div class="column"> 
                 <div class="article topic">
                     <img src="images/icon.png" alt="Cosmog">
@@ -167,7 +794,8 @@
                         ¿Giratina, decís? Eso va a hacer con vosotros al llegar a la liga: haceros girar y atinar una pata para mandaros a comprar más pociones.       </p>       
                 </div>
             </div>
-            
+            </div>
+
         </article>
         <article id="news-wrap">
             <div class="side-content">
@@ -188,14 +816,18 @@
             </div>
         </article>
     </section>
-    
-    
-    
-    
+
+
+
+    <script src="JS/exportarTabla.js"></script>
     <footer>
         <a href="https://www.uc3m.es/">UC3M</a> |
         ©Skaidus&Zhione
         | Politica de privacidad
     </footer>
 </body>
+
+
+</body>
+
 </html>

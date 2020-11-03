@@ -7,6 +7,22 @@ body {
     background-repeat: no-repeat;
     padding:2%;
 }
+paginaDeInicio {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formulario {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+}
 
 section {
     

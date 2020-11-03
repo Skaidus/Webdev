@@ -1,200 +1,106 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <title>Nebulilla foros</title>
-    <meta name="author" content="Skaidus">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=0">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="copyright" content="Free Web tutorials">
-    <meta charset="UTF-8">
-    <!-- STYLES -->
-    <link type="text/css" rel="stylesheet" href="style/reset.css">
-    <link type="text/css" rel="stylesheet" href="style/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Selectmenu - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        fieldset {
+            border: 0;
+        }
+        label {
+            display: block;
+            margin: 30px 0 0 0;
+        }
+        .overflow {
+            height: 200px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#speed" ).selectmenu();
+
+            $( "#files" ).selectmenu();
+
+            $( "#number" )
+                .selectmenu()
+                .selectmenu( "menuWidget" )
+                .addClass( "overflow" );
+
+            $( "#salutation" ).selectmenu();
+        } );
+    </script>
 </head>
 <body>
-    
-    <header>
-        <nav class="dropdown" style="float:left;">
-            <label for="burguer">
-                <img src="images/burguer.png" alt="Cosmog">
-            </label>
-            <input id="burguer" type="checkbox">
-            <div class="dropdown-content" style="left:0;">
-            <a href="Students.htm">Estudiantes</a>
-            <a href="index.htm">Curso</a>
-            <a href="Califications.htm">Calificaciones</a>
-            <a href="#news">Últimas noticias</a>
-            <a href="#events">Próximos eventos</a>
-            </div>
-          </nav>
-        <h1 class="icon">
-            <img src="images/icon.png" alt="Cosmog">
-            <b class="desktop">
-                Nebulilla               
-            </b>
-            <b class="tablet">
-                Foro
-            </b>
-        </h1>
-        <nav id="quicklink-wrap">
-            <ul>
-                <li><a href="#">Contacta</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Iniciar&nbsp;sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <nav id="nav-wrap">
-            <div class="side-content">
-                <h2 class="desktop">Foro</h2>
-                <ul class="nav">
-                    <li><a href="Students.htm">Estudiantes</a></li>
-                    <li><a href="index.htm">Curso</a></li>
-                    <li><a href="Califications.htm">Calificaciones</a></li>
-                    <li><a class="tablet" href="#news">Últimas noticias</a></li>
-                    <li><a class="tablet" href="#events">Próximos eventos</a></li>
-                </ul>
-            </div>
-        </nav>
-        <article id="main-wrap">
-            <div class ="column">
-                <table style="width: 100%;">
-                <tr>
-                    <td >
-                        <b>
-                            Titulo
-                        </b>
-                    </td >
-                    <td >
-                        <b>
-                            Numero de mensajes
-                        </b>
-                    </td>
-                    <td >
-                        <b>
-                            Ultimo mensaje
-                        </b>
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <b>
-                            Mejores iniciales de cada generación
-                        </b>
-                    </td >
-                    <td >
-                        <b>
-                            27
-                        </b>
-                    </td>
-                    <td >
-                        <b>
-                            18:36 10/10/2020
-                        </b>
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <b>
-                            Moveset de Cinderance
-                        </b>
-                    </td >
-                    <td >
-                        <b>
-                            7
-                        </b>
-                    </td>
-                    <td >
-                        <b>
-                            19:03 9/10/2020
-                        </b>
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <b>
-                            ¿Es viable jugar Torkoal a dia de hoy?
-                        </b>
-                    </td >
-                    <td >
-                        <b>
-                            3
-                        </b>
-                    </td>
-                    <td >
-                        <b>
-                            20:42 7/10/2020
-                        </b>
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <b>
-                            Magikarp Speedrun
-                        </b>
-                    </td >
-                    <td >
-                        <b>
-                            19
-                        </b>
-                    </td>
-                    <td >
-                        <b>
-                            19:37 4/10/2020
-                        </b>
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <b>
-                            Bienvenidos Cosmognautas
-                        </b>
-                    </td >
-                    <td >
-                        <b>
-                            52
-                        </b>
-                    </td>
-                    <td >
-                        <b>
-                            15:43 2/10/2020
-                        </b>
-                    </td>
-                </tr>
-            </table>
-        </div>
-            
 
-        </article>
-        <article id="news-wrap">
-            <div class="side-content">
-                <h2 id="news">Últimas noticias</h2>
-                <ul>
-                    <li><span>4/09 - </span>Landorus es baneado</li>
-                    <li><span>5/09 - </span>Agumon es anunciado</li>
-                    <li><span>9/09 - </span>Hau gana inteligencia</li>
-                </ul>
-            </div>
-            <div class="side-content">
-                <h2 id="events">Próximos eventos</h2>
-                <ul>
-                    <li><span>3/10 - </span>Sale Pokemon Z</li>
-                    <li><span>3/11 - </span>Cosmog sale de la bolsa</li>
-                    <li><span>3/12 - </span>Cosmog entra en la bolsa</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-    
-    
-    
-    
-    <footer>
-        <a href="https://www.uc3m.es/">UC3M</a> |
-        ©Skaidus&Zhione
-        | Politica de privacidad
-    </footer>
+<div class="demo">
+
+    <form action="#">
+
+        <fieldset>
+            <label for="speed">Select a speed</label>
+            <select name="speed" id="speed">
+                <option>Slower</option>
+                <option>Slow</option>
+                <option selected="selected">Medium</option>
+                <option>Fast</option>
+                <option>Faster</option>
+            </select>
+
+            <label for="files">Select a file</label>
+            <select name="files" id="files">
+                <optgroup label="Scripts">
+                    <option value="jquery">jQuery.js</option>
+                    <option value="jqueryui">ui.jQuery.js</option>
+                </optgroup>
+                <optgroup label="Other files">
+                    <option value="somefile">Some unknown file</option>
+                    <option value="someotherfile">Some other file with a very long option text</option>
+                </optgroup>
+            </select>
+
+            <label for="number">Select a number</label>
+            <select name="number" id="number">
+                <option>1</option>
+                <option selected="selected">2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+            </select>
+
+            <label for="salutation">Select a title</label>
+            <select name="salutation" id="salutation">
+                <option disabled selected>Please pick one</option>
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Dr.</option>
+                <option>Prof.</option>
+                <option>Other</option>
+            </select>
+        </fieldset>
+
+    </form>
+
+</div>
+
+
 </body>
 </html>
