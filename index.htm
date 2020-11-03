@@ -12,11 +12,22 @@
     <meta name="description" content="Free Web tutorials">
     <meta name="copyright" content="Free Web tutorials">
     <meta charset="UTF-8">
+    <!-- Include css files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/calendar.css">
+    <link rel="stylesheet" href="assets/css/calendar_full.css">
+    <link rel="stylesheet" href="assets/css/calendar_compact.css">
+
+    <!-- Include js files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/calendar.js"></script>
     <!-- STYLES -->
     <link type="text/css" rel="stylesheet" href="style/reset.css">
     <link type="text/css" rel="stylesheet" href="style/style.css">
 </head>
-<body id ="Admin">
+<body>
+<div id ="Admin">
     
     <header>
         <div class="dropdown" style="float:left;">
@@ -51,7 +62,8 @@
             <ul>
                 <li><a href="#">Contacta</a></li>
                 <li><a href="#">FAQ</a></li>
-                <li><a href="#">Iniciar sesión</a></li>
+                <li><button id ="irAInicioDeSesion" onclick="document.getElementById('páginaDeInicio').style.display = 'block'
+    document.getElementById('Admin').style.display = 'none'">Iniciar sesión</button></li>
             </ul>
         </nav>
     </header>
@@ -800,6 +812,7 @@
         <article id="news-wrap">
             <div class="side-content">
                 <h2 id="news">Últimas noticias</h2>
+                <div class="tiva-events-calendar full" data-view="calendar"></div>
                 <ul>
                     <li><span>4/09 - </span>Landorus es baneado</li>
                     <li><span>5/09 - </span>Agumon es anunciado</li>
@@ -825,9 +838,124 @@
         ©Skaidus&Zhione
         | Politica de privacidad
     </footer>
+</div>
+
+
 </body>
+<div id ="páginaDeInicio" style="display: none">
+<formulario >
+    <div id="inicioDeSesion">
+        <h3 >
+            INICIO DE SESION
+        </h3>
+        <div class="formulario" id="IntroducirCorreo">
+            <div class="form-col1 text-question">
+                <label id="label_correo" for="edit-name">Correo electronico</label>
+            </div>
+            <div class="form-col2"><input class="text-field" type="text" maxlength="60" name="correoElectronico" id="edit-name" size="50" value="" tabindex="1">
+            </div>
+        </div>
+        <div class="formulario" id="IntroducirContraseña">
+            <div class="form-col1 text-question"><label id="label_pass" for="edit-pass">Contraseña</label></div>
+            <div class="form-col2"><input class="text-field" type="password" name="password" id="edit-pass" maxlength="128" size="50" tabindex="2" value=""></div>
+        </div>
+        <div class="botones">
+            <input id="login" class="gradient " type="submit" value="Iniciar Sesion" name="login">
+            <input id="Registro" class="gradient " type="submit" value="Registrarse" name="registro" onclick="
+                document.getElementById('inicioDeSesion').style.display = 'none'
+                document.getElementById('FormularioDeRegistro').style.display = 'block'">
+
+        </div>
+    </div>
+    <div id="FormularioDeRegistro" style="display: none;">
+        <h3>
+            REGISTRO
+        </h3>
+        <div class ="form0">
+            <label id="label_user" for ="edit-name">Nombre de usuario</label>
+        </div>
+        <div class ="form1">
+            <input class="text-field" type="text" maxlength="100" name="userName" id="edit-user" size="50" value="Introduzca su nombre de usuario" tabindex="1">
+        </div>
+        <div class ="form0">
+            <label id="label_NIA" for ="edit-name">NIA</label>
+        </div>
+        <div class ="form1">
+            <input class="text-field" type="text" maxlength="9" name="NIA" id="edit-NIA" size="50" value="Introduzca su NIA" tabindex="1">
+        </div>
+        <div class ="form0">
+            <label id="label_contraseña" for ="edit-name">Contraseña</label>
+        </div>
+        <div class ="form1">
+            <input class="text-field" type="password" maxlength="100" name="password" id="edit-password" size="50" value="Introduzca su contraseña" tabindex="1">
+        </div>
+        <div class ="form0">
+            <label id="label_nomap" for ="edit-name">Nombre y Apellidos</label>
+        </div>
+        <div class ="form1">
+            <input class="text-field" type="text" maxlength="100" name="nombreApellidos" id="edit-nomap" size="50" value="Introduzca su nombre y apellidos" tabindex="1">
+        </div>
+        <div class ="form0">
+            <label id="label_email" for ="edit-name">Correo electronico</label>
+        </div>
+        <div class ="form1">
+            <input class="text-field" type="text" maxlength="100" name="correoElectronico" id="edit-email" size="50" value="Introduzca su correo electronico" tabindex="1">
+        </div>
+        <div class ="form0">
+            <label id="label_fecha" for ="edit-name">Fecha de nacimiento</label>
+        </div>
+        <div class ="form1">
+            <input class="text-field" type="text" maxlength="100" name="fechaNacimiento" id="edit-fecha" size="50" value="Introduzca su nombre de usuario" tabindex="1">
+        </div>
+        <div class ="form0">
+            <label id="label_DNI" for ="edit-name">Documento de Identificacion</label>
+        </div>
+        <div class ="form1">
+            <input class="text-field" type="text" maxlength="100" name="DNI" id="edit-DNI" size="50" value="Introduzca su correo electronico" tabindex="1">
+        </div>
+        <div class="form0">
+            <label class="label_rol" for = "edit-name">Rol</label>
+        </div>
+        <select name="rol" id="rolselect">
+            <option disabled selected>Elija su rol</option>
+            <option >Administrador</option>
+            <option >Profesor</option>
+            <option >Estudiante</option>
+        </select>
+        <div id="grado" event>
+            <div class="form0">
+                <label class="label_grado" for = "edit-name" style="display: none">Grado</label>
+            </div>
+            <select name="grado" id="gradoselect" style="display: none;">
+                <option disabled selected>Elija su rol</option>
+                <option >Grado en Ingenieria Informática</option>
+                <option >Grado en Derecho</option>
+                <option >Grado en ingenieria Industrial</option>
+            </select>
+        </div>
+        <div class ="form0">
+            <label id="label_universidad" for ="edit-name">Universidad</label>
+        </div>
+        <div class ="form1">
+            <input aria-valuetext="UC3M" disabled name="universidad" id="edit-uni" size="50" value="Universidad Carlos III">
+        </div>
+        <label><input type="checkbox" name = "terms" value="accept"> <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p></label>
+        <button type="button" id="RegistroCompleto">Completar Registro</button>
+        <button type="button" id="BorrarRegistro" onclick="document.getElementsByClassName('form1').children.value ='' ">Borrar</button>
+
+    </div>
+    </table>
+</formulario>
 
 
+<footer>
+    <a href="https://www.uc3m.es/">UC3M</a> |
+    ©Skaidus&Zhione
+    | Politica de privacidad
+</footer>
+<script src="JS/registro.js"></script>
+    <script src="JS/main.js"></script>
+</div>
 </body>
 
 </html>
