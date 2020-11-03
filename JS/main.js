@@ -8,6 +8,11 @@ if(rol == "Estudiante"){
 
 }
 
+document.getElementById('irAInicioDeSesion').addEventListener("click", irAlLogin)
+function irAlLogin(){
+    document.getElementById('páginaDeInicio').style.display = 'block'
+    document.getElementById('Admin').style.display = 'none'
+}
 function pulsarBotonEstudiantes(){
     document.getElementById('principal').style.display = 'none'
     document.getElementById('foro').style.display = 'none'
